@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: archlinux:base-devel
+    container: archlinux/archlinux:base-devel
     steps:
       - name: Prepare
         run: |
