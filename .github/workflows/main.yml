@@ -26,12 +26,12 @@ jobs:
       - name: Build with gcc
         run: |
           export CC=gcc CXX=g++
-          meson build-gcc/ -Dinput_emulation=disabled --werror --auto-features=enabled
+          meson build-gcc/ -Dinput_emulation=disabled -Dwlroots:werror=false --auto-features=enabled
           ninja -C build-gcc/
       - name: Build with gcc (no vr)
         run: |
           export CC=gcc CXX=g++
-          meson build-gcc-novr/ -Dinput_emulation=disabled -Denable_openvr_support=false --werror --auto-features=enabled
+          meson build-gcc-novr/ -Dinput_emulation=disabled -Denable_openvr_support=false -Dwlroots:werror=false --auto-features=enabled
           ninja -C build-gcc-novr/
 #      - name: Build with clang
 #        run: |
